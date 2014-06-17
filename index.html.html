@@ -1,0 +1,385 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script language="javascript">
+var nombre,ami,s,llama;//se declaran variables
+var email,an1,feo,ola,sol,oso,p;
+var nombre,con2;
+var se1, se;
+var nomb,micorreo,cel21, asu, segu;
+var mivida;
+
+
+function say(){//se crea la  funcion 
+	nombre=document.getElementById("txtnom").value;//manda a llamar el cuadro de texto
+	s=nombre.length;//calcula la longitud de una cadena de texto
+	ami=nombre.toUpperCase();//trasforma todos los caracteres a mayusculas
+	document.getElementById("txtnom").value=ami;
+	nombre=document.getElementById("txtnom").value;
+	for (x=0; x<=s-1; x++)//valor inicial,condiccion,incremento
+	//ciclo for es para repetir n numero de veces
+	{//pero aqui se utiliza para para medir los caracteres en un cuadro de texto y para ver si se encuentra en el rango indicado 
+		llama=nombre.charAt(x);//obtiene el caracter en la posicion indicada
+	if((llama>='A' && llama<='Z') || (llama==" "))//
+	{
+	} 
+else
+	 {
+		alert("Caracteres incorrectos");
+		break;//cierra el ciclo for
+	}
+	}
+}
+
+function carreo(){//se crea la  funcion 
+email=document.getElementById("txtemail").value;
+{
+	if(((email.charAt(0)>='0')&&(email.charAt(0)<='9'))||(email.charAt(0)=='@'))//obtiene el caracter en la posicion indicada
+	{
+			alert("Primer caracter inválido");
+		}
+	else
+	{
+		ola=email.indexOf('@');//calcula la posicion en que se encuentra el caracter indicado dentro de la cadena de texto 
+		sol=email.lastIndexOf('@');//calcula la ultima posicion en que se encuentra el caracter indicado dentro de la cadena de texto
+		if(ola!=sol){//diferente de 
+			alert("Solo ingresa un @");
+		
+		}
+		else{
+			if((ola==-1)&&(sol==-1))//compara 
+			{
+			alert("Introduce un @");	
+			
+				}
+				else{
+					oso=email.indexOf('.');//calcula la posicion en que se encuentra el caracter indicado dentro de la cadena de texto 
+					p=email.lastIndexOf('.');//calcula la ultima posicion en que se encuentra el caracter indicado dentro de la cadena de texto
+	          if(oso!=p)//diferente
+			  {
+				  alert("Solo introduce un punto");
+		
+			  }
+			  else{
+				  if((oso==-1)&&(p==-1)){//compara
+					  alert("Introduce un punto");
+					 
+					  }
+			  }
+					}
+			}
+	}		
+ }
+}	
+function llamar(){//se crea la  funcion 
+numero=document.getElementById("txttele").value;
+anch=numero.length;//calcula la longitud de una cadena de texto
+	for(x=0; x<=anch-1; x++){//valor inicial,condiccion,incremento
+one=numero.charAt(x);//obtiene el caracter en la posicion indicada
+	if(((one>=0) && (one<=9 ))|| (one=='-'))
+	{
+		}
+		else{
+			alert("error, Favor de introducir solo números");
+				break;
+			}
+		}
+	}
+	
+
+function asu()//se crea la  funcion 76
+{
+	nombre=document.getElementById("txtasu").value;
+	con2=nombre.toUpperCase();//trasforma todos los caracteres a mayusculas
+document.getElementById("txtasu").value=con2;
+}
+
+ 
+	function seguridad(){//se crea la  funcion 
+    se1=document.getElementById("txtsegu1").value;
+		se=document.getElementById("txtseg").value;
+    if(se1==se || se=="")
+	{
+		}
+    else{
+      alert("Valor de seguridad incorrecto");
+	document.getElementById("txtsegu1").value="";
+    }
+	}
+	
+	
+function enviar(){//se crea la  funcion 
+	nomb=document.getElementById("txtnom").value;
+	micorreo=document.getElementById("txtemail").value;
+  cel21=document.getElementById("txttele").value;
+  asu=document.getElementById("txtasu").value;
+  segu=document.getElementById("txtsegu1").value;
+    mivida=document.getElementById("txtsegu1").value;
+    if(mivida!=segu){ 
+alert("Valor de seguridad incorrecto");
+}else{
+if((nomb==0) || (micorreo==0) || (cel21==0) || (asu==0) || (segu==0))
+  {
+    alert("Introduzca todos los datos");
+  }
+  else{
+    alert("Mensaje enviado");
+    document.getElementById("txtnom").value="";
+    document.getElementById("txtemail").value="";
+    document.getElementById("txttele").value="";
+    document.getElementById("txtasu").value="";
+    document.getElementById("txtsegu1").value="";
+  }
+}
+	}
+</script>
+
+
+
+
+
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header"> 
+		<h1>ANDREA</h1>
+	</div>	
+	<div data-role="content">
+		<ul data-role="listview">
+			<li><a href="#page2">¿Quiénes Somos?</a></li>
+            <li><a href="#page3">Servicios o Productos</a></li>
+			<li><a href="#page4">Equipo</a></li>
+            <li><a href="#page5">Contáctanos</a></li>
+		</ul>		
+	</div>
+    <h2><center>
+   <img src="ne.jpg" width="25%" height="25%">
+  <img src="AA.jpg" width="25%" height="25%">
+  <img src="98.jpg" width="25%" height="25%">
+  </center>
+	<div data-role="footer">
+		<h4>sahian garcia huesca</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>¿Quiénes Somos?</h1>
+</div><center><img src="si.jpg" width="40%" height="20%"></center>
+	<div data-role="content">	
+	<center><h1>“En el nombre del Diseño”</h1> </center>
+    <br>
+    <br>
+    <h3>
+Es impresionante el crecimiento que ha tenido la empresa mexicana en la última década; A pesar de tener más de 35 años en el mercado (fundada en 1973), no fue hasta hace unos años cuando su crecimiento se potencializó gracias a las nuevas líneas de producto que introdujo.
+<br>
+<br>
+Tan sólo en lo referente a calzado, la compañía cuenta con ocho marcas que le permiten abarcar todo el mercado, incluyendo a caballeros, niños y bebés:  Andrea, Andrea Zone, Ferrato, Ferrato Life, Confort, Quax, CoolStar, Baby.
+<br>
+<br>
+Lo interesante es que es un negocio que nunca tendrá fin, porque no hay mujer que no quiera comprar más zapatos. La industria del calzado es de las más rentables, pero sobre todo muy versátil, lo cual ANDREA ha aprovechado para extender sus dominios y sus productos, añadiendo también una línea cosméticos (IU Cosmetics) y otra de ropa de vestir: Mia y Andrea Jeans.
+<br>
+<br>
+La compañía cuenta con más de 100 sucursales en la República Mexicana y Estados Unidos. Al paso que van, es muy probable que en un par de años estarán presentes en gran parte de Latino América, sobre todo por la oportunidad que ofrecen a las amas de casa para ingresar como vendedoras, lo cual es un fuerte argumento para adentrarse en el mercado latino.
+</h3>
+	</div>
+    <center>
+ <img src="rosa.jpg" width="25%" height="25%">
+  <img src="sa.jpg" width="25%" height="25%">
+ <img src="amo.jpg" width="28%" height="25%">
+ </center>
+	<div data-role="footer">
+		<h4>EN EL NOMBRE DEL DISEÑO</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>SERVICIOS DE PRODUCTOS</h1>
+	</div>
+	<div data-role="content">	
+		<h1>SERVICIOS</h1>
+ Nuestro objetivo es ofrecerte oportunidades de negocio a través de nuestro sistema de ventas que te brinda:
+<br>
+•	Crecimiento profesional y personal
+<br>
+•	Excelentes beneficios económicos
+<br>
+•	Capacitación en sus diferentes líneas de producto
+<br>
+•	Asesoría constante
+<br>
+•	CrediAndrea ¡adquieres producto sin pagarlo, al instante!
+<br>
+<br>
+<br>
+<br>
+Al ser una Estrella Andrea, podrás disfrutar de los siguientes beneficios:
+<br>
+•	Descuentos Adicionales según tu volumen de compras
+<br>
+•	Sistema de cambios, que te garantiza un negocio seguro
+<br>
+•	Tienes la oportunidad de ganar bonos, que premian tu esfuerzo y son como dinero en efectivo para que adquieras más productos ¡y vendas más!
+<br>
+•	Atractivas promociones
+Además, como Estrella Andrea tienes derecho a comprar todos los productos a precio de mayoreo y obtener excelentes beneficios según tu grado de constancia.
+<br>
+<br>
+Puedes afiliarte en tu sucursal más cercana o por teléfono. Para más información del proceso visita nuestra página WEB, sección Inicia tu Negocio o marca sin costo al 01-800-90-10-000.
+<br>
+<br>
+En ANDREA ofrecemos a nuestras Estrellas oportunidades para realizar sus aspiraciones elevando su desarrollo personal y profesional, así como un servicio cordial, ágil, informativo y capacitación al afiliarse a nuestro sistema.
+<br>
+ANDREA cuenta con un gran prestigio respaldado por productos de moda, calidad y precios justos, gracias a su alta tecnología de fabricación, que utiliza materiales de alta calidad, para ofrecer mayor durabilidad y confort.
+
+
+<br>
+<br>
+<br>
+
+<center>
+<img src="crema.jpg" width="25%" height="25%">
+<img src="fo.png" width="23%" height="25%">
+<img src="ii.jpg" width="28%" height="25%">
+</center>
+<br>
+<br>
+ <h1>PRODUCTOS</h1>
+
+En Andrea, la calidad y el buen gusto se ven reflejados en sus diseños de temporada, ofreciéndote lo mejor en calzado de última moda para que estrenes todos los días.
+<br>
+ En Andrea Outlet podrás descubrir las mejores ofertas dentro de su catálogo digital, en donde encontrarás el catálogo Outlet Dama, Outlet Andrea.
+
+   <center>
+<img src="rosita.jpg" width="25%" height="25%">
+<img src="2.jpg" width="28%" height="25%">
+<img src="modelos.jpg" width="25%" height="25%">
+<img src="jj.jpg" width="25%" height="25%">
+<img src="8.png" width="25%" height="30%">
+<img src="pp.jpg" width="25%" height="25%">
+<img src="ff.jpg" width="25%" height="20%">
+<img src="dd.jpg" width="25%" height="25%">
+<img src="v.jpg" width="25%" height="25%">
+</center>	
+    </div>
+	<div data-role="footer">
+		<h4>EN EL NOMBRE DEL DISEÑO</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>EQUIPO</h1>
+	</div>
+	<div data-role="content">
+  
+	Nuestra dedicación y trabajo nos ha dado una enorme cantidad de experiencia, la cual nos gusta compartir con nuestro clientes para seguir generando valor, resolver problemas y atacar los retos que se presentan día a día para seguir compitiendo en el ambiente globalizado en el que vivimos.
+
+ <br>
+ <br> 
+<table width="0" border="0">
+  <tr>
+    <td><img src="say.jpg" width="80%" height="30%"></td>
+    <td><img src="alvaro.jpg" width="80%" height="20%"></td>
+  </tr>
+  <tr>
+    <td>Nombre:SAHIAN GARCIA HUESCA
+    <br>
+    Fecha de nacimiento: 13 de dicimbre de 1996
+    <br>
+    Estudia en CBTiS N°184, la carrera de tecnico en Programación.
+    <br>
+Le gusta la musica de banda, estar con su familia le encantan los perros y ir de compras.
+   </td>
+    <td>Nombre:ALVARO CURUZ VAQUERO
+    <br>
+    Fecha de nacimiento:3 de septimbre de 1997
+    <br>
+    Estudia en CBTiS N°184, la carrera de tecnico en Programación.
+    <br>
+    Le gusta pasar la tarde con su familia y ermanos su pasatiempo es dormir y escuchar musica.
+    
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+  		
+	</div>
+    <div data-role="footer">
+		<h4>EN EL NOMBRE DEL DISEÑO</h4>
+	</div>
+    </div>
+    <div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Contacto</h1>
+	</div>
+   <h1>**ANDREA**</h1>
+   <h4>Dirección</h4>
+   matamoros n°14 tilapa, puebla.
+   <br>
+   Telefono:43-884-43
+   <br>
+   Celular: 243-113-95-50 
+   <br>
+   <h4>Ubicación</h4>
+    <img src="yy.gif" width="35%" height="30%">
+    <br>
+    <br>
+    <br>
+	<table width="0" border="0">
+  <tr>
+   <td><label for="textinput">Nombre</label></td>
+    <td>  <input type="text" name="txtnom" id="txtnom" value=""  onBlur="say()"/></td>
+  </tr>
+  <tr>
+    <td> <label for="textinput">Email</label></td>
+    <td> 
+	  <input type="text" name="txtemail" id="txtemail" value="" onBlur="carreo()" /></td>
+  </tr>
+  <tr>
+    <td><label for="textinput2">Telefono</label></td>
+    <td>
+	  <input type="text" name="txttele" id="txttele" value=""  onBlur="llamar()"/>
+	 </td>
+  </tr>
+  <tr>
+    <td><label for="textinput">Asunto</label></td>
+    <td>
+      <textarea cols="40" rows="8" name="txtasu" id="txtasu" onBlur="asu()"></textarea></td>
+  </tr>
+  <tr>
+    <td> <label for="textinput">Seguridad</label></td>
+    <td><input type="text" name="txtseg" value="5490"
+     disabled="disabled" id="txtseg" value=""/>
+	 </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="text" name="txtsegu1" id="txtsegu1" value="" onBlur=" seguridad()" /></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><button onClick="enviar()">ENVIAR</button></td>
+  </tr>
+</table>
+<img src="lo.jpg" width="25%" height="25%">
+<img src="de.jpg" width="25%" height="25%">
+	<div data-role="footer">
+		<h4>EN EL NOMBRE DEL DISEÑO</h4>
+	</div>
+</div>
+</div>
+
+</body>
+</html>
